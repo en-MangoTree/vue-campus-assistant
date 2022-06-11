@@ -50,7 +50,6 @@
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="personal">个人信息</el-dropdown-item>
             <el-dropdown-item command="connect">联系管理员</el-dropdown-item>
             <el-dropdown-item command="logout">退出登陆</el-dropdown-item>
           </el-dropdown-menu>
@@ -87,9 +86,7 @@ export default {
         this.activePath = path;
     },
     handleCommand(command) {
-        if (command === 'personal'){
-            this.$message('个人中心');
-        } else if (command === 'connect') {
+        if (command === 'connect') {
              this.$message('联系管理员');
         } else {
             this.logout();
